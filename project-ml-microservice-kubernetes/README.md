@@ -1,6 +1,6 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/hiroshiyamada/DevOps_Microservices/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/hiroshiyamada/DevOps_Microservices/tree/master)
 
-## Project Overview
+## Project Summary
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
@@ -23,7 +23,22 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
+## Files in the repository
+* README.md: this file
+* Dockerfile: settings for creating docker image
+* docker_out.txt: terminal output from run_docker.sh
+* make_prediction.sh: execute prediction for housing prices
+* run_docker.sh: running docker image
+* upload_dokcer.sh: upload Docker image into Docker Hub
+* Makefile: settings for easily running commands such as installing libraries or linting
+* app.py: main application coeds for predicting housing prices
+* kubernetes.out.txt: terminal output from run_kubernetes.sh
+* requirements.txt: list of libraries to install
+* run_kubernetes.sh: script for deploying with Kubernetes
+
+## Instructions
+
+### Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -42,9 +57,6 @@ source .devops/bin/activate
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+### Execute predictions
+Open another terminal and then, run
+`./make_prediction.sh`
